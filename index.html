@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1.0" name="viewport">
+    <meta name="keywords" content="Quadratic, congruence, congruent, reciprocity law,modulo, prime,simultaneous,Linear ,equation,">
+    <meta name="decription" content="Provides quick solution to Mathematical problems">
+    <meta name="author" content="John Isonguyo">
+    <title>Slik</title>
+    <link rel="stylesheet" href="main.css">
+    
+  </head>
+  <body>
+    <header class="logo"><h1>Slik</h1><hr></header>
+    
+   <div class="nav">
+     <ul>
+       <li><a href="#sle2">Simultaneous&nbsp;Linear&nbsp;Equation&nbsp;In&nbsp;Two&nbsp;Variables</a></li>
+       <li><a href="#sle3">Simultaneous&nbsp;Linear&nbsp;Equation&nbsp;In&nbsp;Three&nbsp;Variables</a></li>
+       <li><a href="#qc">Quadratic&nbsp;Congruence</a></li>
+       <li><a href="#pt">Primality&nbsp;Test</a></li>
+       <li><a href="#pg">Primes&nbsp;Generator</a></li>
+       <li><a href="#fibg">Fibonacci&nbsp;Term&nbsp;Generator</a></li>
+       
+     </ul>
+   </div>
+   
+    <div class="container">
+      
+      <div class="SLE2" id="sle2">
+        <div class="write-up">
+          <h1>Simultaneous Linear Equation In Two Variables</h1>
+          <p>Let the simultaneous equation be of the form:<br>
+           a<sub>1</sub>x&nbsp;+&nbsp;b<sub>1</sub>y&nbsp;=&nbsp;c<sub>1</sub><br>
+           a<sub>2</sub>x&nbsp;+&nbsp;b<sub>2</sub>y&nbsp;=&nbsp;c<sub>2</sub><br>Enter the corresponding values:</p>
+        </div>
+        <div class="inputs">
+          
+          <div class="As">
+            <label for="a1">a<sub>1</sub></label>
+            <input type="number" id="a1">
+            <label for="a2">a<sub>2</sub></label>
+            <input type="number" id="a2">
+          </div>
+          
+          <div class="Bs">
+            <label for="b1">b<sub>1</sub></label>
+            <input type="number" id="b1">
+            <label for="b2">b<sub>2</sub></label>
+            <input type="number" id="b2">
+          </div>
+        
+        
+         <div class="Cs">
+            <label for="c1">c<sub>1</sub></label>
+            <input type="number" id="c1">
+            <label for="c2">c<sub>2</sub></label>
+            <input type="number" id="c2">
+          </div>
+        </div>
+        <div class="soldis">
+          <div class="displaySLE2">
+            
+          </div>
+          <button class="solveSLE2">solve </button>
+        </div>
+        </div>
+      
+      
+      
+      <div class="SLE3" id="sle3">
+        <div class="write-up">
+          <h1>Simultaneous Linear Equation In Three Variables</h1>
+          <p>Let the simultaneous equation be of the form:<br>a<sub>1</sub>x&nbsp;+&nbsp;b<sub>1</sub>y&nbsp;+&nbsp;c<sub>1</sub>z&nbsp;=&nbsp;d<sub>1</sub><br>a<sub>2</sub>x&nbsp;+&nbsp;b<sub>2</sub>y&nbsp;+&nbsp;c<sub>2</sub>z&nbsp;=&nbsp;d<sub>2</sub><br>a<sub>3</sub>x&nbsp;+&nbsp;b<sub>3</sub>y&nbsp;+&nbsp;c<sub>3</sub>z&nbsp;=&nbsp;d<sub>3</sub><br>Enter the corresponding values:</p>
+        </div>
+        
+        <div class="inputs">
+          
+          <div class="As">
+            <label for="#A1">a<sub>1</sub></label>
+            <input type="number" id="A1">
+            <label for="#A2">a<sub>2</sub></label>
+            <input type="number" id="A2">
+            <label for="#A3">a<sub>3</sub></label>
+            <input type="number" id="A3">
+          </div>
+          
+          <div class="Bs">
+             <label for="#B1">b<sub>1</sub></label>
+            <input type="number" id="B1">
+            <label for="#B2">b<sub>2</sub></label>
+            <input type="number" id="B2">
+            <label for="#B3">b<sub>3</sub></label>
+            <input type="number" id="B3">
+          </div>
+          
+          <div class="Cs">
+             <label for="#C1">c<sub>1</sub></label>
+            <input type="number" id="C1">
+            <label for="#C2">c<sub>2</sub></label>
+            <input type="number" id="C2">
+            <label for="#C3">c<sub>3</sub></label>
+            <input type="number" id="C3">
+          </div>
+          
+          <div class="Ds">
+             <label for="#D1">d<sub>1</sub></label>
+            <input type="number" id="D1">
+            <label for="#D2">d<sub>2</sub></label>
+            <input type="number" id="D2">
+            <label for="#D3">d<sub>3</sub></label>
+            <input type="number" id="D3">
+          </div>
+          
+        </div>
+        
+        <div class="soldis">
+          <div class="displaySLE3">
+            
+          </div>
+          <button class="solveSLE3">solve</button>
+        </div>
+      </div>
+      
+      
+      
+      
+      <div class="QC" id="qc">
+        <div class="write-up">
+          <h1>Quadratic Congruence</h1>
+          <p>Let the Quadratic congruence be of the form:<br> ax<sup>2</sup>&nbsp;+&nbsp;bx&nbsp;+&nbsp;c&nbsp;&#8801;&nbsp;0(mod p).<br>Enter the corresponding values:</p>
+        </div>
+        <div class="inputs">
+          <div class="a">
+            <label for="a">a</label>
+            <input type="number" name="a" id="a">
+          </div>
+          <div class="b">
+            <label for="b">b</label>
+            <input type="number" name="b" id="b">
+          </div>
+          <div class="c">
+            <label for="c">c</label>
+            <input type="number" name="c" id="c">
+          </div>
+          <div class="p">
+            <label for="p">p</label>
+            <input type="number" name="p" id="p">
+          </div>
+        </div>
+        <div class="soldis">
+        <div class="displayQC">
+          
+        </div>
+        <button class="solveQC">solve</button>
+        </div>
+      </div>
+      
+      
+      
+      
+      <div class="prime-tester" id="pt">
+        <div class="write-up">
+          <h1>Primality Test</h1>
+          <p>Enter a number to check whether its prime or not:</p>
+        </div>
+        <div class="inputs">
+          <label for="#num">Number:</label>
+          <input type="number" id="num">
+        </div>
+        <div class="soldis">
+          <div class="displayPT">
+            
+          </div>
+          <button class="check">check</button>
+        </div>
+      </div>
+      
+      
+      
+      <div class="prime-gen" id="pg">
+        <div class="write-up">
+          <h1>Primes Generator</h1>
+          <p>Generate all primes less than or equal to the given upperbound:</p>
+        </div>
+        <div class="inputs">
+          <label for="#upperbound">Upperbound:</label>
+          <input type="number" id="upperbound">
+        </div>
+        <div class="soldis">
+          <div class="displayPG">
+            
+          </div>
+          <button class="generate">display</button>
+        </div>
+      </div>
+      
+ 
+    
+      <div class="FIBG" id="fibg">
+        <div class="write-up">
+          <h1>Fibonacci Terms Generator</h1>
+          <p>Generate a fibonacci sequence with the specified length:</p>
+        </div>
+        <div class="inputs">
+          <label for="#term">Length:</label>
+          <input type="number" id="term">
+        </div>
+        <div class="soldis">
+          <div class="displayFIB">
+            
+          </div>
+          <button class="generateFb">display</button>
+        </div>
+      </div>
+      
+    </div>
+    
+    
+    
+    
+    
+    
+    
+   <script>console.log(innerWidth,innerHeight)</script> 
+    
+    
+    
+    
+    
+ <script src="main.js"></script>
+    
+  </body>
+</html>
