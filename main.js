@@ -192,21 +192,24 @@ let sequence = new Map();
    sequence.clear();
    return result;
  }
+document.querySelector(".generateFb").addEventListener("cli
+ck",(e)=>{
+  show(fibonacciSequence,"displayFIB");
+});
  
- function gcd(...array){
-//  if(!array.every((item)=>Number.isInteger(item)))throw new Error(`Unexpected
- // floating number`);
+function gcd(...array){
+  if(!array.every((item)=>Number.isInteger(item)))return`Unexpected value`;
   let nums = array.map((num)=>num<0?-num:num )
   function gcdOfFirstTwo(a,b){
     let nums= [a,b];
     nums.sort((a,b)=>a-b);
-    if(nums[0]=== 0){
+    if(+nums[0]=== 0){
       return nums[1];
     }else if(nums[1]%nums[0] == 0){
       return nums[0]
     }else{
     let rem = nums[1]%nums[0];
-     return gcdOfFirstTwo(nums[0],rem);
+     return gcdOfFirstTwo(+nums[0],rem);
     }
   }
   nums.sort((a,b)=>a-b);
@@ -221,23 +224,24 @@ let sequence = new Map();
     
   }
 }
-document.querySelector(".generateFb").addEventListener("click",(e)=>{
-  show(fibonacciSequence,"displayFIB");
-});
+
 
 function greatestCommonDivisor(){
-	let collection = document.querySelector("#terms").value;
-
-	let num = collection.split(",");
-	try{
-	  if(num.every(value=>typeof value == "number")){
-		throw new Error("Unexpected value");
-	  }
-	}catch(err){
-		    return err.message;
-	   };
-	return gcd(...num);
+  let collection = document.querySelector("#terms").value;
+  let values = [];
+  let num = collection.split(",");
+  for(let value of num){
+    values.push(+value);
+  }
+  try{
+    if(!values.every(value=>isFinite(value))){
+      throw new Error("Unexpected value");
+    };
+  }catch(err){
+    return err.message;
+  };
+  return gcd(...values);
 }
 document.querySelector(".find-gcd").addEventListener("click",(evt)=>{
-	show(greatestCommonDivisor,"displayGCD");
+        show(greatestCommonDivisor,"displayGCD");
 });
