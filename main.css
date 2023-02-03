@@ -322,7 +322,12 @@
 }
 
 .GCD {
-	grid-column:2 / end ;
-	grid-row:3 / 4 ;
+	grid-column:2 / end;
+	grid-row:3 / 4;
+	border: 1px solid gray;
+	margin: 4px;
+	background: #8b8b8b;
+
+
 }
 
