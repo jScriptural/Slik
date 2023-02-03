@@ -111,14 +111,10 @@ function solveSimultaneousEquationInThreeVariables(){
   let d3 = document.querySelector("#D3").value;
   a1=+a1;a2=+a2;a3=+a3;b1=+b1;b2=+b2;b3=+b3;c1=+c1;c2=+c2;c3=+c3;d1=+d1;d2=+d2;d3=+d3;
   let determinant = (a1*b2*c3 + c1*a2*b3 + b1*a3*c2) - (a1*b3*c2 + b1*a2*c3 + c1*a3*b2);
-   console.log(determinant)
   if(determinant === 0)return "No solution";
   let x = ((d1*b2*c3 + c1*d2*b3 + b1*d3*c2)-(d1*b3*c2 + b1*d2*c3 + c1*d3*b2))/determinant;
-  //console.log(x)
   let y = ((a1*d2*c3 + c1*a2*d3 + d1*a3*c2)-(a1*d3*c2 + d1*a2*c3 + c1*a3*d2))/determinant;
-  //console.log(y)
   let z = ((a1*b2*d3 + d1*a2*b3 + b1*a3*d2)-(a1*b3*d2 + b1*a2*d3 + d1*a3*b2))/determinant;
- // console.log(z)
   return `x=${x}<br>y=${y}<br>z=${z}`
   
 }
@@ -197,8 +193,51 @@ let sequence = new Map();
    return result;
  }
  
- 
+ function gcd(...array){
+//  if(!array.every((item)=>Number.isInteger(item)))throw new Error(`Unexpected
+ // floating number`);
+  let nums = array.map((num)=>num<0?-num:num )
+  function gcdOfFirstTwo(a,b){
+    let nums= [a,b];
+    nums.sort((a,b)=>a-b);
+    if(nums[0]=== 0){
+      return nums[1];
+    }else if(nums[1]%nums[0] == 0){
+      return nums[0]
+    }else{
+    let rem = nums[1]%nums[0];
+     return gcdOfFirstTwo(nums[0],rem);
+    }
+  }
+  nums.sort((a,b)=>a-b);
+  if(nums.length == 1){
+    return nums[0]
+  }else if(nums.length == 2){
+    return gcdOfFirstTwo(nums[0],nums[1]);
+  }else {
+    let gd = gcdOfFirstTwo(nums[0],nums[1]);
+    nums.splice(0,2);
+    return gcd(gd,...nums);
+    
+  }
+}
 document.querySelector(".generateFb").addEventListener("click",(e)=>{
   show(fibonacciSequence,"displayFIB");
 });
 
+function greatestCommonDivisor(){
+	let collection = document.querySelector("#terms").value;
+
+	let num = collection.split(",");
+	try{
+	  if(num.every(value=>typeof value == "number")){
+		throw new Error("Unexpected value");
+	  }
+	}catch(err){
+		    return err.message;
+	   };
+	return gcd(...num);
+}
+document.querySelector(".find-gcd").addEventListener("click",(evt)=>{
+	show(greatestCommonDivisor,"displayGCD");
+});
