@@ -192,8 +192,7 @@ let sequence = new Map();
    sequence.clear();
    return result;
  }
-document.querySelector(".generateFb").addEventListener("cli
-ck",(e)=>{
+document.querySelector(".generateFb").addEventListener("click",(e)=>{
   show(fibonacciSequence,"displayFIB");
 });
  
