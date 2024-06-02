@@ -3,7 +3,7 @@ function show(func,screen){
   document.querySelector(`.${screen}`).innerHTML = func();
 }
 
-
+/*// A remembrance of how naive I was
 function isPrime(num){
     let notPrimes = [];
     for (let i=1; i<=Math.sqrt(num); ++i){
@@ -17,6 +17,25 @@ function isPrime(num){
     } else {
         return false;
     };
+}
+*/
+
+function isPrime(num){
+  if(num < 2 || !Number.isInteger(num))
+    return false;
+
+  if(num === 2)
+    return true;
+
+  if(num % 2 == 0)
+    return false;
+
+  for(let i = 3; i*i < num; i += 2){
+    if(num % i === 0)
+      return false;
+  }
+
+  return true;
 }
 
 
